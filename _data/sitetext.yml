@@ -1,7 +1,7 @@
 header:
-    title: Welcome to our Studio!
-    text: It's Nice To Meet You
-    button: Tell Me More
+    title: La conception de votre intérieur tel que vous l'imaginez
+    text: 
+    button: En savoir plus
     buttonlink: "#services"
 
 services:
@@ -9,15 +9,15 @@ services:
     text: "Lorem ipsum"
     section: services
     list:
-      - title: "E-Commerce"
+      - title: "Home Staging"
+        desc: "Le home staging permet de transformer/décorer à moindre coûte votre logement. Il n’y a aucun changement concernant les murs et la structure architectural. On déplace le mobilier, on décore, on peint, on accessoirise."
+        icon: fas fa-home #find more at https://fontawesome.com/icons
+      - title: "Architecture d’Intérieur"
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
-        icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
-      - title: "Responsive Design"
+        icon: fas fa-ruler-combined
+      - title: "Service personnalisé"
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
-        icon: fas fa-laptop       
-      - title: "[Markdown](https://en.wikipedia.org/wiki/Markdown)"
-        desc: "Your description here, full **Markdown** support"
-        icon: fab fa-markdown
+        icon: fas fa-plus
 
 portfolio:
     title: "Portfolio"
