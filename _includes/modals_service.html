@@ -1,6 +1,6 @@
 <!-- Service Modals -->
 {% for service in site.data.sitetext.services.list %}
-<div class="portfolio-modal modal fade" id="ps{{ forloop.index }}" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="service-modal modal fade" id="ps{{ forloop.index }}" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="close-modal" data-dismiss="modal">
@@ -14,6 +14,8 @@
               <div class="modal-body">
                 <!-- Service Details Go Here -->
                 <h2 class="text-uppercase">{{ service.title }}</h2>
+
+
                 <p class="item-intro text-muted">{{ service.desc }}</p>
                 <img class="img-fluid d-block mx-auto {{ service.icon }}" src="" alt="{{ service.alt }}">
                 <button class="btn btn-primary" data-dismiss="modal" type="button">

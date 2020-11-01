@@ -14,8 +14,50 @@
               <div class="modal-body">
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">{{ project.title }}</h2>
+                
+
+                <div class="carousel-container">
+                  <div class="carousel my-carousel carousel--translate">
+                    <input class="carousel__activator" type="radio" name="carousel" id="F{{ forloop.index }}" checked="checked" />
+                    <input class="carousel__activator" type="radio" name="carousel" id="G{{ forloop.index }}" />
+                    <input class="carousel__activator" type="radio" name="carousel" id="H{{ forloop.index }}" />
+                    <input class="carousel__activator" type="radio" name="carousel" id="I{{ forloop.index }}" />
+                    <input class="carousel__activator" type="radio" name="carousel" id="J{{ forloop.index }}" />
+                      <div class="carousel__controls"><label class="carousel__control carousel__control--backward" for="J{{ forloop.index }}"></label><label class="carousel__control carousel__control--forward" for="G{{ forloop.index }}"></label></div>
+                      <div class="carousel__controls"><label class="carousel__control carousel__control--backward" for="F{{ forloop.index }}"></label><label class="carousel__control carousel__control--forward" for="H{{ forloop.index }}"></label></div>
+                      <div class="carousel__controls"><label class="carousel__control carousel__control--backward" for="G{{ forloop.index }}"></label><label class="carousel__control carousel__control--forward" for="I{{ forloop.index }}"></label></div>
+                      <div class="carousel__controls"><label class="carousel__control carousel__control--backward" for="H{{ forloop.index }}"></label><label class="carousel__control carousel__control--forward" for="J{{ forloop.index }}"></label></div>
+                      <div class="carousel__controls"><label class="carousel__control carousel__control--backward" for="I{{ forloop.index }}"></label><label class="carousel__control carousel__control--forward" for="F{{ forloop.index }}"></label></div>
+                      <div class="carousel__track">
+                          <li class="carousel__slide">
+                            <img src="https://place-hold.it/800x600" alt="">
+                          </li>
+                          <li class="carousel__slide">
+                            <img src="https://place-hold.it/400x500" alt="">
+                          </li>
+                          <li class="carousel__slide">
+                            <img src="https://place-hold.it/400x200" alt="">
+                          </li>
+                          <li class="carousel__slide">
+                            <img src="https://place-hold.it/500x300" alt="">
+                          </li>
+                          <li class="carousel__slide">
+                            <img src="https://place-hold.it/400x300" alt="">
+                          </li>
+                      </div>
+                      <div class="carousel__indicators">
+                        <label class="carousel__indicator" for="F{{ forloop.index }}"></label>
+                        <label class="carousel__indicator" for="G{{ forloop.index }}"></label>
+                        <label class="carousel__indicator" for="H{{ forloop.index }}"></label>
+                        <label class="carousel__indicator" for="I{{ forloop.index }}"></label>
+                        <label class="carousel__indicator" for="J{{ forloop.index }}"></label>
+                      </div>
+                  </div>
+              </div>
+
+
+
                 <p class="item-intro text-muted">{{ project.desc }}</p>
-                <img class="img-fluid d-block mx-auto" src="{{ project.image }}" alt="{{ project.alt }}">
                 <p>{{ project.content }}</p>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
