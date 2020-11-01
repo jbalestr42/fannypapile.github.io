@@ -23,7 +23,7 @@
                     {% for image in project.images %}
                     {% assign next_i = forloop.index0 | plus: 1 | modulo: forloop.length %}
                     {% assign prev_i = forloop.index0 | minus: 1 %}
-                    <input class="carousel__activator" type="radio" name="carousel" id="{{ image.id }}{{ main_loop_i }}" {% if forloop.first %}checked="checked"{% endif %} />
+                    <input class="carousel__activator" type="radio" name="carousel{{ main_loop_i }}" id="{{ image.id }}{{ main_loop_i }}" {% if forloop.first %}checked="checked"{% endif %} />
                     <div class="carousel__controls">
                       <label class="carousel__control carousel__control--backward" for="{{ project.images[prev_i].id }}{{ main_loop_i }}"></label>
                       <label class="carousel__control carousel__control--forward" for="{{ project.images[next_i].id }}{{ main_loop_i }}"></label>
