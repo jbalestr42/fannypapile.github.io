@@ -8,10 +8,14 @@ caption:
   subtitle: Graphic Design
   thumbnail: https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-agency/master/src/assets/img/portfolio/02-thumbnail.jpg
 images:
-  - image: https://place-hold.it/400x300
-  - image: https://place-hold.it/400x300
-  - image: https://place-hold.it/400x300
-  - image: https://place-hold.it/400x300
+  - url: https://place-hold.it/200x400
+    id: A
+  - url: https://place-hold.it/300x400
+    id: B
+  - url: https://place-hold.it/400x400
+    id: C
+  - url: https://place-hold.it/500x400
+    id: D
 ---
 Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
 
