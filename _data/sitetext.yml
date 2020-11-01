@@ -22,7 +22,7 @@ services:
 
 portfolio:
     title: "Portfolio"
-    text: "Lorem ipsum dolor sit amet consectetur."
+    text: ""
     section: portfolio
     closebutton: "Fermer"
 
