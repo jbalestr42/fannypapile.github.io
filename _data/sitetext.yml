@@ -6,7 +6,7 @@ header:
 
 services:
     title: "Services"
-    text: "Lorem ipsum"
+    text: 
     section: services
     list:
       - title: "Home Staging"
@@ -17,13 +17,14 @@ services:
         icon: fas fa-ruler-combined
       - title: "Service personnalisé"
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
-        icon: fas fa-plus
+        icon: fas fa-user-friends
+    closebutton: "Fermer"
 
 portfolio:
     title: "Portfolio"
     text: "Lorem ipsum dolor sit amet consectetur."
     section: portfolio
-    closebutton: "Close Project"
+    closebutton: "Fermer"
 
 about:
     title: "About Us"

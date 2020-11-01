@@ -12,20 +12,27 @@
       </div>
 	  
       <div class="row text-center">
-	  {% for service in site.data.sitetext.services.list %}
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="{{ service.icon | default: "fas fa-shopping-cart" }} fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">{{ service.title | markdownify }}</h4>
-          {% if service.desc %}
-            <div class="text-muted">{{ service.desc | markdownify }}</div>
-          {% endif %}
-        </div>
-	  {% endfor %}
+	      {% for service in site.data.sitetext.services.list %}
+            <div class="col-md-4 service-item">
+            <a class="service-link" data-toggle="modal" href="#ps{{ forloop.index }}">
+              <div class="service-hover">
+                <div class="service-hover-content">
+                  <i class="{{ fas fa-plus fa-3x | default: "fas fa-plus fa-3x" }}"></i>
+                </div>
+              </div>
+              <span class="fa-stack fa-4x service-icon">
+                  <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                  <i class="{{ service.icon | default: "fas fa-shopping-cart" }} fa-stack-1x fa-inverse"></i>
+              </span>
+              <h4 class="service-heading text-muted">{{ service.title | markdownify }}</h4>
+              {% if service.desc %}
+                <div class="text-muted service-desc">{{ service.desc | markdownify }}</div>
+              {% endif %}
+            </a>
+          </div>
+	      {% endfor %}
       </div>
-	  
     </div>
   </section>
-<!-- End Services -->
+  <!-- End Services -->
+  {% include modals_service.html %}
