@@ -28,5 +28,6 @@ analytics:
 
 collections:
   portfolio:
+  services:
 
 markdown: kramdown

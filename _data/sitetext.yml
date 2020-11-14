@@ -8,23 +8,13 @@ services:
     title: "Services"
     text: 
     section: services
-    list:
-      - title: "Home Staging"
-        desc: "Le home staging permet de transformer/décorer à moindre coût votre logement. Il n’y a aucun changement concernant les murs et la structure architectural. On déplace le mobilier, on décore, on peint, on accessoirise."
-        icon: fas fa-home #find more at https://fontawesome.com/icons
-      - title: "Architecture d’Intérieur"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
-        icon: fas fa-ruler-combined
-      - title: "Service personnalisé"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
-        icon: fas fa-user-friends
-    closebutton: "Fermer"
+    closebutton: "Retour"
 
 portfolio:
     title: "Portfolio"
     text: ""
     section: portfolio
-    closebutton: "Fermer"
+    closebutton: "Retour"
 
 about:
     title: "About Us"
@@ -34,6 +24,7 @@ about:
 portrait:
     title: "PORTRAIT"
     text: "Lorem ipsum dolor sit amet consectetur"
+    section: portrait
 
 contact:
     title: "Contact Us"

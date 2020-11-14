@@ -1,5 +1,5 @@
 <!-- Service Modals -->
-{% for service in site.data.sitetext.services.list %}
+{% for service in site.services %}
 <div class="service-modal modal fade" id="ps{{ forloop.index }}" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -10,17 +10,82 @@
         </div>
         <div class="container">
           <div class="row">
-            <div class="col-lg-8 mx-auto">
+            <div class="col-lg-9 mx-auto">
               <div class="modal-body">
                 <!-- Service Details Go Here -->
-                <h2 class="text-uppercase">{{ service.title }}</h2>
 
+                <!-- Title -->
+                <h2 class="text-uppercase">{{ service.caption.title }}</h2>
+                <hr>
+                
+                <!-- Details -->
+                {% for result in service.results %}
+                  <div class="row justify-content-around align-items-center">
+                    <div class="col-1">
+                      <p class="{{ result.icon }} fa-3x text-primary"></p>
+                    </div>
+                    <div class="col-10 text-left text-muted font-weight-bold">
+                      <p>{{ result.desc }}</p>
+                    </div>
+                  </div>
+                {% endfor %}
+                <hr>
+                
+                <!-- Steps -->
+                {% for step in service.steps %}
+                <h4 class="text-uppercase">{{ step.title }}</h2>
+                <div class="row justify-content-around align-items-center">
+                  <div class="col-1">
+                    <p class="{{ step.icon }} fa-3x text-primary"></p>
+                  </div>
+                  <div class="col-10 text-left text-muted font-weight-bold">
+                    <p>{{ step.desc }}</p>
+                  </div>
+                </div>
+                {% endfor %}
+                <hr>
+
+                <!-- Prices -->
+                <div class="row">
+                  <div class="col-12 pb-4">
+                    <div class="py-2 modal-service-price">
+                      <span class="text-muted">{{ service.forfaits.free }}</span>
+                    </div>
+                  </div>
+                  {% for forfait in service.forfaits.prices %}
+                  <div class="col-12 col-md-4 pb-4">
+                    <div class="modal-service-price">
+                      <div class="row text-center">
+                        <div class="col-12">
+                          <span class="text-muted">{{ forfait.price }}€</span>
+                          <span class="text-muted">{{ forfait.desc }}</span>
+                        </div>
+                        {% for option in forfait.options %}
+                        <div class="col-12">
+                          <span class="text-muted">{{ option.desc }}</span>
+                        </div>
+                        {% endfor %}
+                      </div>
+                      <div class="row text-left pl-2">
+                        <div class="col-12 text-muted">Exemples:</div>
+                        {% for example in forfait.examples %}
+                          <div class="col-12 text-muted">- {{ example.desc }}</div>
+                        {% endfor %}
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+                <hr>
 
                 <p class="item-intro text-muted">{{ service.desc }}</p>
                 <img class="img-fluid d-block mx-auto {{ service.icon }}" src="" alt="{{ service.alt }}">
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
-                  {{ site.data.sitetext.service.closebutton | default: "Close Project" }}</button>
+                  {{ site.data.sitetext.services.closebutton | default: "Close Project" }}
+                </button>
+
+                <!-- Service Details End Here -->
               </div>
             </div>
           </div>
